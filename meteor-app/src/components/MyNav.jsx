@@ -20,7 +20,6 @@ function MyNav({ city, country, setPositions, setCity, setCountry }) {
 
     const fetchInput = (searchQuery) => {
         if (searchQuery) {
-            console.log(searchQuery)
             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=e817edfdb93608a78cc8f70f2ec220d7&lang=it&units=metric`
             )
                 .then((response) => {
@@ -31,7 +30,6 @@ function MyNav({ city, country, setPositions, setCity, setCountry }) {
                     }
                 })
                 .then((data) => {
-                    console.log(data)
                     setPositions([data.coord.lat, data.coord.lon])
                     setCountry(data.sys.country)
                     setCity(data.name)
@@ -62,14 +60,15 @@ function MyNav({ city, country, setPositions, setCity, setCountry }) {
                                 <div className="circle-container me-3">
                                     <i className="bi bi-bell-fill text-light"></i>
                                 </div>
-                                <p className="text-light mb-0 fs-4">
-                                    <i className="bi bi-geo-alt-fill text-light fs-5"></i>&nbsp;
-                                    {city}, {country}
-                                </p>
+
                             </div>
                         </Nav.Link>
+                        <p className="text-light mb-0 fs-6 city-country-container">
+                            <i className="bi bi-geo-alt-fill text-light fs-5"></i>&nbsp;
+                            {city}, {country}
+                        </p>
 
-                        <Form className="flex-grow-1 mx-3" onSubmit={handleSubmit} >
+                        <Form className="flex-grow-1 mx-3" onSubmit={handleSubmit}>
                             <input type="text" placeholder="Cerca città..." className="search-input py-3 w-100" id="search" onChange={handleInputChange} />
                         </Form>
 
@@ -82,6 +81,7 @@ function MyNav({ city, country, setPositions, setCity, setCountry }) {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+
 
     )
 }

@@ -9,3 +9,10 @@
   width: 24px; /* Regola la dimensione dell'icona */
   height: 24px;
 }
+
+.distanzaListItem{
+  line-height: 0.5;
+  border:none !important;
+  color:#333333 !important
+}
+

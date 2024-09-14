@@ -60,10 +60,10 @@ body {
 }
 
 .search-input {
-  padding-left: 30px; /* Spazio per l'icona */
+  padding-left: 30px; 
   border: 1px solid black;
   border-radius: 50px;
-  box-sizing: border-box; /* Per includere il padding nella larghezza totale */
+  box-sizing: border-box;
   background-color: #1E1E1E;
   color: white;
 }

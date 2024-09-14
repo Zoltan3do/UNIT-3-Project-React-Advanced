@@ -1,0 +1,51 @@
+{
+    "nubi-sparse": {
+        "clas": "bi-cloud-sun-fill",
+        "colors": [
+            "#D3D3D3",
+            "#FFFACD"
+        ]
+    },
+    "cielo-sereno": {
+        "clas": "bi-brightness-low-fill",
+        "colors": [
+            "#FFD700",
+            "#87CEEB"
+        ]
+    },
+    "cielo-coperto": {
+        "clas": "bi-clouds",
+        "colors": [
+            "#2F4F4F",
+            "#DCDCDC"
+        ]
+    },
+    "pioggia-leggera": {
+        "clas": "bi-umbrella-fill",
+        "colors": [
+            "#ADD8E6",
+            "#C0C0C0"
+        ]
+    },
+    "pioggia-moderata": {
+        "clas": "bi-cloud-drizzle-fill",
+        "colors": [
+            "#4682B4",
+            "#708090"
+        ]
+    },
+    "poche-nuvole": {
+        "clas": "bi-cloud-fill",
+        "colors": [
+            "#B0C4DE",
+            "#696969"
+        ]
+    },
+    "forte-pioggia": {
+        "clas": "bi-cloud-lightning-rain-fill",
+        "colors": [
+            "#FFD700",
+            "#1E90FF"
+        ]
+    }
+}
