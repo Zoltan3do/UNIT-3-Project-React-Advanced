@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import MyNav from './components/MyNav';
 import DaysContainer from './components/DaysContainer';
-import GlobalMap from "./components/GlobalMap";
+import GM from "./components/GM";
 import { Container, Row, Col } from 'react-bootstrap';
 import ChartContainer from './components/ChartContainer';
 import OtherBigCities from './components/OtherBigCities';
@@ -90,7 +90,7 @@ function App() {
           </Col>
           <Col lg={4}><ChartContainer dati={dates5}></ChartContainer></Col>
           <Col lg={9}>
-            <GlobalMap coord={positions} setPosition={setPositions}></GlobalMap>
+            <GM coord={positions} setPosition={setPositions}></GM>
           </Col>
           <Col lg={3}>
             <OtherBigCities setPos={setPositions}></OtherBigCities>

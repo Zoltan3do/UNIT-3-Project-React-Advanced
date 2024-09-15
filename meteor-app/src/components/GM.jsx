@@ -6,7 +6,7 @@ import icon from "../assets/img/pngegg.png"
 import { useState } from 'react';
 
 
-function GlobalMap({ setPosition }) {
+function GM({ setPosition }) {
     const [lastClick, setLastClick] = useState(null);
 
     const MapClickHandler = () => {
@@ -53,4 +53,4 @@ function GlobalMap({ setPosition }) {
 
     )
 }
-export default GlobalMap
+export default GM
