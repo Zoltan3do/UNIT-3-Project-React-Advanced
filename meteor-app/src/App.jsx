@@ -4,6 +4,7 @@ import MyNav from './components/MyNav';
 import DaysContainer from './components/DaysContainer';
 import GlobalMap from "./components/GlobalMap";
 import { Container, Row, Col } from 'react-bootstrap';
+import ChartContainer from './components/ChartContainer';
 
 function App() {
   const [positions, setPositions] = useState([0, 0]);
@@ -23,6 +24,7 @@ function App() {
         }
       })
       .then((data) => {
+        console.log(data)
         setDates5(data);
       })
       .catch((err) => {
@@ -40,6 +42,7 @@ function App() {
         }
       })
       .then((data) => {
+        
         setCity(data.name);
         setCountry(data.sys.country);
         setDati(data);
@@ -77,12 +80,13 @@ function App() {
 
       <Container>
         <Row>
-          <Col lg={9}>
+          <Col lg={8}>
             {
               dati && dates5.list &&
               <DaysContainer today={dati} dates5={dates5} />
             }
           </Col>
+          <Col lg={4}><ChartContainer dati={dates5}></ChartContainer></Col>
           <Col lg={9}>
             <GlobalMap coord={positions} setPosition={setPositions}></GlobalMap>
           </Col>

@@ -3,7 +3,6 @@ import Today from "./Today";
 import DaysAfter from "./DaysAfter"
 
 function DaysContainer({ today, dates5 }) {
-    console.log(dates5)
     return (
         <>
         <h3 className="text-light text-start mt-5 ms-3 fw-semibold">Prossimi 5 giorni</h3>
