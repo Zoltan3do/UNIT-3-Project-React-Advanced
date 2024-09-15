@@ -19,9 +19,10 @@ function MyNav({ city, country, setPositions, setCity, setCountry }) {
         setInputValue(e.target.value)
     }
 
+    //fetch 1
     const fetchInput = (searchQuery) => {
         if (searchQuery) {
-            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=9a57447c456d4d1bfaf1ad4ac7e25dea&lang=it&units=metric`
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=e1f339447dd50fa48017f5ae33f3eb56&lang=it&units=metric`
             )
                 .then((response) => {
                     if (response.ok) {

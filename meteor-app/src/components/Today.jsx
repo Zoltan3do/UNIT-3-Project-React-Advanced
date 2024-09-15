@@ -19,7 +19,10 @@ function Today({ dt, datas }) {
                 setColor2(variables["nubi-sparse"].colors[1]);
                 break;
             case "cielo sereno":
-                setIconClass(variables["cielo-sereno"].clas);
+                if (parseInt(timeNow.split(":")[0]) < 18 && parseInt(timeNow.split(":")[0]) > 6)
+                    setIconClass(variables["cielo-sereno"].clas);
+                else
+                    setIconClass("bi-moon-stars-fill");
                 setColor1(variables["cielo-sereno"].colors[0]);
                 setColor2(variables["cielo-sereno"].colors[1]);
                 break;

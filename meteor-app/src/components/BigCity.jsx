@@ -1,11 +1,16 @@
 /* eslint-disable react/prop-types */
-function BigCity({ stato, citta, descrizione, gradi, icona }) {
+function BigCity({ stato, citta, descrizione, gradi, icona, lat, lon, setPos }) {
+    const handleClick = () => {
+        setPos([lat, lon]);
+    };
+
     return (
-        <div className="container city-container py-2 px-4 rounded rounded-5">
+        lat && lon &&
+        <div className="container city-container py-2 px-4 rounded rounded-5 mb-3">
             <div className="row align-items-center">
                 <div className="col-9 text-light text-start">
                     <p className="text-secondary mb-0">{stato}</p>
-                    <p className="mt-0">{citta}</p>
+                    <p className="mt-0 citta" onClick={handleClick}>{citta}</p>
                     <small>{descrizione}</small>
                 </div>
                 <div className="col-3 text-light fs-2">
@@ -14,6 +19,7 @@ function BigCity({ stato, citta, descrizione, gradi, icona }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
-export default BigCity
+
+export default BigCity;

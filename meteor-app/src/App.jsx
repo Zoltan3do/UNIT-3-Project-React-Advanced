@@ -15,8 +15,9 @@ function App() {
   const [dates5, setDates5] = useState({});
 
 
+  //fetch 3
   const fetch5Data = () => {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${positions[0]}&lon=${positions[1]}&appid=9a57447c456d4d1bfaf1ad4ac7e25dea&lang=it&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${positions[0]}&lon=${positions[1]}&appid=e1f339447dd50fa48017f5ae33f3eb56&lang=it&units=metric`)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -25,7 +26,6 @@ function App() {
         }
       })
       .then((data) => {
-        console.log(data)
         setDates5(data);
       })
       .catch((err) => {
@@ -33,8 +33,9 @@ function App() {
       });
   };
 
+  //fetch 4
   const fetchCoords = () => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${positions[0]}&lon=${positions[1]}&appid=9a57447c456d4d1bfaf1ad4ac7e25dea&lang=it&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${positions[0]}&lon=${positions[1]}&appid=e1f339447dd50fa48017f5ae33f3eb56&lang=it&units=metric`)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -43,10 +44,10 @@ function App() {
         }
       })
       .then((data) => {
-        
         setCity(data.name);
         setCountry(data.sys.country);
         setDati(data);
+        console.log(data)
       })
       .catch((err) => {
         console.log(err);
@@ -91,7 +92,9 @@ function App() {
           <Col lg={9}>
             <GlobalMap coord={positions} setPosition={setPositions}></GlobalMap>
           </Col>
-          <Col lg={3}><OtherBigCities></OtherBigCities></Col>
+          <Col lg={3}>
+            <OtherBigCities setPos={setPositions}></OtherBigCities>
+          </Col>
         </Row>
 
       </Container>

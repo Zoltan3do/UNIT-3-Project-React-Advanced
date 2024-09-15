@@ -24,7 +24,6 @@ function ChartContainer({ dati }) {
 
     useEffect(() => {
         handleData()
-        console.log(data)
     }, [dati])
 
     return (

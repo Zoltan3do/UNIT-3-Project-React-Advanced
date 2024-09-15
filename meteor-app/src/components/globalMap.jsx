@@ -39,7 +39,7 @@ function GlobalMap({ setPosition }) {
             <h3 className='text-light text-start mt-lg-4 mt-5 ms-3 fw-semibold mb-3'>Mappa Globale</h3>
             <MapContainer attributionControl={false} maxBounds={bounds} center={[43.11, 12.23]} zoom={2} minZoom={2} zoomControl={false} style={{
                 height: "300px", border: "none"
-            }} className='rounded rounded-5 mappa' onClick={MapClickHandler}>
+            }} className='rounded rounded-5 mappa mb-5' onClick={MapClickHandler}>
                 <TileLayer
                     url="https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png"
                 />
