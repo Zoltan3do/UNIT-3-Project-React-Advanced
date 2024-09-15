@@ -16,7 +16,7 @@ function App() {
 
 
   const fetch5Data = () => {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${positions[0]}&lon=${positions[1]}&appid=e817edfdb93608a78cc8f70f2ec220d7&lang=it&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${positions[0]}&lon=${positions[1]}&appid=9a57447c456d4d1bfaf1ad4ac7e25dea&lang=it&units=metric`)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -34,7 +34,7 @@ function App() {
   };
 
   const fetchCoords = () => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${positions[0]}&lon=${positions[1]}&appid=e817edfdb93608a78cc8f70f2ec220d7&lang=it&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${positions[0]}&lon=${positions[1]}&appid=9a57447c456d4d1bfaf1ad4ac7e25dea&lang=it&units=metric`)
       .then((response) => {
         if (response.ok) {
           return response.json();
