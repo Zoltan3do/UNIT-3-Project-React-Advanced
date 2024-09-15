@@ -2,6 +2,7 @@
 import { Card } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import variables from "..//variables.json";
+import { convertTimestampToFormattedDate, getDayInItalian } from '../utils';
 
 function Today({ dt, datas }) {
     const [timeNow, setTimeNow] = useState("");
@@ -78,23 +79,6 @@ function Today({ dt, datas }) {
             clearInterval(intervalId);
         };
     }, []);
-
-    function convertTimestampToFormattedDate(dt) {
-        const date = new Date(dt * 1000);
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
-    }
-
-    function getDayInItalian(ciao) {
-        const giorniSettimana = [
-            'Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'
-        ];
-        const date = new Date(ciao);
-        const dayOfWeek = date.getDay();
-        return giorniSettimana[dayOfWeek];
-    }
 
     const oggi = getDayInItalian(convertTimestampToFormattedDate(dt));
 
