@@ -51,6 +51,16 @@ function Today({ dt, datas }) {
                 setColor1(variables["forte-pioggia"].colors[0]);
                 setColor2(variables["forte-pioggia"].colors[1]);
                 break;
+            case "foschia":
+                setIconClass(variables["foschia"].clas);
+                setColor1(variables["foschia"].colors[0]);
+                setColor2(variables["foschia"].colors[1]);
+                break;
+            case "temporale con pioggia":
+                setIconClass(variables["temporale-con-pioggia"].clas);
+                setColor1(variables["temporale-con-pioggia"].colors[0]);
+                setColor2(variables["temporale-con-pioggia"].colors[1]);
+                break;
             default:
                 setIconClass(variables["cielo-sereno"].clas);
                 setColor1("#1B1B1D");

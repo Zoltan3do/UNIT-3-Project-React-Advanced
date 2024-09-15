@@ -47,5 +47,19 @@
             "#FFD700",
             "#1E90FF"
         ]
+    },
+    "foschia": {
+        "clas": "bi-cloud-fog-fill",
+        "colors": [
+            "#8080C0",
+            "#D3D3D3"
+        ]
+    },
+    "temporale-con-pioggia": {
+        "clas": "bi-lightning-charge-fill",
+        "colors": [
+            "#4F4F4F",
+            "#0066CC"
+        ]
     }
 }

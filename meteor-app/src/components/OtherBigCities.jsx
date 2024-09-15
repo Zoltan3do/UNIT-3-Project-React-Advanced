@@ -12,7 +12,7 @@ function OtherBigCities({ setPos }) {
         "Roma",
         "Tokyo",
         "Delhi",
-        "Shangai",
+        "Berlino",
         "Sao Paulo",
         "Cairo",
         "Beijing",
