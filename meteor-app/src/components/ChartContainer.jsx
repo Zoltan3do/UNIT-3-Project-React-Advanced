@@ -24,7 +24,7 @@ function ChartContainer({ dati }) {
 
     return (
         <div className="mt-5">
-            <h4 className="text-light">Possibilità di pioggia</h4>
+            <h5 className="text-light">Possibilità di pioggia</h5>
             {
                 dati.list && <RainChart data={data} />
             }
