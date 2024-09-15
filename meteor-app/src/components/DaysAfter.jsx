@@ -32,14 +32,14 @@ function DaysAfter({ dt, datas }) {
                 setIconClass(variables["forte-pioggia"].clas);
                 break;
             default:
-                setIconClass(""); // Imposta un valore di default se nessuna condizione corrisponde
+                setIconClass("");
                 break;
         }
     };
 
     useEffect(() => {
         handleVariables();
-    }, [datas]); // Aggiungi `datas` come dipendenza
+    }, [datas]);
 
     const oggi = getDayInItalian(convertTimestampToFormattedDate(dt));
 

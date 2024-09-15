@@ -7,8 +7,8 @@ function DaysContainer({ today, dates5 }) {
         <>
         <h3 className="text-light text-start mt-5 ms-3 fw-semibold">Prossimi 5 giorni</h3>
             {today && today.dt ? (
-                <div className="d-flex gap-3 mt-4 container">
-                    <div className="row">
+                <div className="d-flex mt-4 container mb-4 ">
+                    <div className="row d-flex justify-content-between">
                         <div className="col-12 col-md-4">
                             <Today dt={today.dt} datas={today} />
                         </div>
