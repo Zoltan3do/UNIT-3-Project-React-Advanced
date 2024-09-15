@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap"
 import BigCity from "./BigCity"
 import { useState } from "react"
+import variables from "..//variables.json";
 
 function OtherBigCities() {
 
