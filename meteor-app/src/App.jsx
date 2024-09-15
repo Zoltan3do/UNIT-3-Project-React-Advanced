@@ -88,11 +88,11 @@ function App() {
               <DaysContainer today={dati} dates5={dates5} />
             }
           </Col>
-          <Col lg={4}><ChartContainer dati={dates5}></ChartContainer></Col>
-          <Col lg={9}>
+          <Col xs={12} lg={4}><ChartContainer dati={dates5}></ChartContainer></Col>
+          <Col xs={12} lg={9}>
             <GM coord={positions} setPosition={setPositions}></GM>
           </Col>
-          <Col lg={3}>
+          <Col xs={12} lg={3}>
             <OtherBigCities setPos={setPositions}></OtherBigCities>
           </Col>
         </Row>
