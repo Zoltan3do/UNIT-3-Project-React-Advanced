@@ -61,5 +61,13 @@
             "#4F4F4F",
             "#0066CC"
         ]
+    },
+    "pioggia fortissima": {
+        "clas": "bi-cloud-rain-heavy-fill",
+        "colors": [
+            "#4A6572",
+            "#3D9DA3"
+        ]
     }
+
 }
