@@ -36,8 +36,8 @@ function GlobalMap({ setPosition }) {
 
     return (
         <>
-            <h3 className='text-light text-start mt-lg-4 mt-5 ms-3 fw-semibold mb-3'>Global Map</h3>
-            <MapContainer maxBounds={bounds} center={[43.11, 12.23]} zoom={2} minZoom={2} zoomControl={false} style={{
+            <h3 className='text-light text-start mt-lg-4 mt-5 ms-3 fw-semibold mb-3'>Mappa Globale</h3>
+            <MapContainer attributionControl={false} maxBounds={bounds} center={[43.11, 12.23]} zoom={2} minZoom={2} zoomControl={false} style={{
                 height: "300px", border: "none"
             }} className='rounded rounded-5 mappa' onClick={MapClickHandler}>
                 <TileLayer

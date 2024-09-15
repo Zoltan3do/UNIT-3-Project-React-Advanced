@@ -76,11 +76,10 @@ function App() {
       <MyNav city={city} country={country} setPositions={setPositions} setCity={setCity} setCountry={setCountry} />
       <Container>
         <Row>
-          <Col lg={10}>
+          <Col lg={9}>
             <DaysContainer today={dati} dates5={dates5} />
-
           </Col>
-          <Col lg={10}>
+          <Col lg={9}>
             <GlobalMap coord={positions} setPosition={setPositions}></GlobalMap>
           </Col>
         </Row>
