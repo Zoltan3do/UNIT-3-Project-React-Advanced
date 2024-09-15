@@ -31,6 +31,18 @@ function DaysAfter({ dt, datas }) {
             case "forte pioggia":
                 setIconClass(variables["forte-pioggia"].clas);
                 break;
+            case "foschia":
+                setIconClass(variables["foschia"].clas);
+                break;
+            case "temporale con pioggia":
+                setIconClass(variables["temporale-con-pioggia"].clas);
+                break;
+            case "pioggia fortissima":
+                setIconClass(variables["pioggia-fortissima"].clas);
+                break;
+            case "pioggerella":
+                setIconClass(variables["pioggerella"].clas);
+                break;
             default:
                 setIconClass("");
                 break;
