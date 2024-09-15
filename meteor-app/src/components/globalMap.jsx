@@ -6,7 +6,7 @@ import icon from "../assets/img/pngegg.png"
 import { useState } from 'react';
 
 
-function GlobalMap({ coord, setPosition }) {
+function GlobalMap({ setPosition }) {
     const [lastClick, setLastClick] = useState(null);
 
     const MapClickHandler = () => {
@@ -29,8 +29,8 @@ function GlobalMap({ coord, setPosition }) {
     });
 
     const bounds = [
-        [-90, -180], 
-        [90, 180] 
+        [-90, -180],
+        [90, 180]
     ];
 
 
