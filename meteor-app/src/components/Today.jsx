@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Card } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import variables from "../../public/variables.json";
+import variables from "..//variables.json";
 
 function Today({ dt, datas }) {
     const [timeNow, setTimeNow] = useState("");

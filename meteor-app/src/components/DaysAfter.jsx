@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Card } from "react-bootstrap";
-import variables from "../../public/variables.json";
+import variables from "..//variables.json";
 import { useEffect, useState } from "react";
 
 function DaysAfter({ dt, datas }) {
