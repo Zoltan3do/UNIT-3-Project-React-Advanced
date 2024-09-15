@@ -11,7 +11,8 @@ function BigCity({ stato, citta, descrizione, gradi, icona, lat, lon, setPos }) 
                 <div className="col-9 text-light text-start">
                     <p className="text-secondary mb-0">{stato}</p>
                     <p className="mt-0 citta" onClick={handleClick}>{citta}</p>
-                    <small>{descrizione.toUpperCase()}</small>
+
+                    <small><em>{descrizione.toUpperCase()}</em></small>
                 </div>
                 <div className="col-3 text-light fs-2">
                     <i className={`bi ${icona}`}></i>
