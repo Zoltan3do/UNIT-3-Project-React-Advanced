@@ -20,6 +20,7 @@ function OtherBigCities({ setPos }) {
         "Osaka",
     ];
 
+    //fetch 2
     const fetchInput = async (searchQuery) => {
         if (searchQuery) {
             try {
