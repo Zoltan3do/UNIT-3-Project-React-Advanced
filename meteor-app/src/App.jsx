@@ -5,6 +5,7 @@ import DaysContainer from './components/DaysContainer';
 import GlobalMap from "./components/GlobalMap";
 import { Container, Row, Col } from 'react-bootstrap';
 import ChartContainer from './components/ChartContainer';
+import OtherBigCities from './components/OtherBigCities';
 
 function App() {
   const [positions, setPositions] = useState([0, 0]);
@@ -90,6 +91,7 @@ function App() {
           <Col lg={9}>
             <GlobalMap coord={positions} setPosition={setPositions}></GlobalMap>
           </Col>
+          <Col lg={3}><OtherBigCities></OtherBigCities></Col>
         </Row>
 
       </Container>
