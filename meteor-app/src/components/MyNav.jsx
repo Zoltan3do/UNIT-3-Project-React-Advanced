@@ -61,7 +61,6 @@ function MyNav({ city, country, setPositions, setCity, setCountry }) {
                                 <div className="circle-container me-3">
                                     <i className="bi bi-bell-fill text-light"></i>
                                 </div>
-
                             </div>
                         </Nav.Link>
                         <p className="text-light mb-0 fs-6 city-country-container">

@@ -23,3 +23,7 @@
 .mappa:hover {
   cursor: pointer
 }
+
+#search {
+  outline: none;
+}
