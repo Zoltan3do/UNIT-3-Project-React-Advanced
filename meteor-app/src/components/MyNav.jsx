@@ -12,6 +12,7 @@ function MyNav({ city, country, setPositions, setCity, setCountry }) {
         e.preventDefault();
         setVal(inputValue)
         fetchInput(val)
+        e.target.reset()
     }
 
     const handleInputChange = (e) => {
