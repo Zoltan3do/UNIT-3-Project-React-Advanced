@@ -68,6 +68,12 @@
             "#4A6572",
             "#3D9DA3"
         ]
+    },
+    "pioggerella": {
+        "clas": "bi-droplet-fill",
+        "colors": [
+            "#A8C4D0",
+            "#D1E8E2 "
+        ]
     }
-
 }

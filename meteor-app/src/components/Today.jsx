@@ -66,6 +66,11 @@ function Today({ dt, datas }) {
                 setColor1(variables["pioggia-fortissima"].colors[0]);
                 setColor2(variables["pioggia-fortissima"].colors[1]);
                 break;
+            case "pioggerella":
+                setIconClass(variables["pioggerella"].clas);
+                setColor1(variables["pioggerella"].colors[0]);
+                setColor2(variables["pioggerella"].colors[1]);
+                break;
             default:
                 setIconClass(variables["cielo-sereno"].clas);
                 setColor1("#1B1B1D");
