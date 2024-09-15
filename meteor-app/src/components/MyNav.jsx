@@ -82,8 +82,6 @@ function MyNav({ city, country, setPositions, setCity, setCountry }) {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-
-
     )
 }
 

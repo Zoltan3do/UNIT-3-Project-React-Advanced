@@ -32,7 +32,6 @@ function ChartContainer({ dati }) {
             {
                 dati.list && <RainChart data={data} />
             }
-
         </div>
     );
 }
