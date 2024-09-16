@@ -64,7 +64,7 @@ function DaysAfter({ dt, datas }) {
                 <Card.Title className="d-flex justify-content-between" style={{ fontSize: "3.5em" }}>
                     <i className={`bi ${iconClass} text-light`}></i>
                 </Card.Title>
-                <Card.Text className="text-light fs-2 mt-5 fw-semibold">
+                <Card.Text className="text-light fs-2 mt-5 fw-semibold" style={{whiteSpace:"nowrap"}}>
                     {parseInt(datas.main.temp).toFixed(0)}°
                 </Card.Text>
             </Card.Body>
