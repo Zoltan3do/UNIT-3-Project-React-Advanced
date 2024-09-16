@@ -8,12 +8,12 @@ import ChartContainer from './components/ChartContainer';
 import OtherBigCities from './components/OtherBigCities';
 
 function App() {
-  const [positions, setPositions] = useState([0, 0]);
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
+  const defaultPosition = [40.8518, 14.2681]; 
+  const [positions, setPositions] = useState(defaultPosition);
+  const [city, setCity] = useState("Napoli");
+  const [country, setCountry] = useState("IT");
   const [dati, setDati] = useState({});
   const [dates5, setDates5] = useState({});
-
 
   //fetch 3
   const fetch5Data = () => {
@@ -47,7 +47,7 @@ function App() {
         setCity(data.name);
         setCountry(data.sys.country);
         setDati(data);
-        console.log(data)
+        console.log(data);
       })
       .catch((err) => {
         console.log(err);
@@ -55,6 +55,7 @@ function App() {
   };
 
   useEffect(() => {
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -83,25 +84,21 @@ function App() {
       <Container>
         <Row>
           <Col lg={8}>
-            {
-              dati && dates5.list &&
-              <DaysContainer today={dati} dates5={dates5} />
-            }
+            {dati && dates5.list && <DaysContainer today={dati} dates5={dates5} />}
           </Col>
-          <Col xs={12} lg={4}><ChartContainer dati={dates5}></ChartContainer></Col>
+          <Col xs={12} lg={4}>
+            <ChartContainer dati={dates5} />
+          </Col>
           <Col xs={12} lg={9}>
-            <GM coord={positions} setPosition={setPositions}></GM>
+            <GM coord={positions} setPosition={setPositions} />
           </Col>
           <Col xs={12} lg={3}>
-            <OtherBigCities setPos={setPositions}></OtherBigCities>
+            <OtherBigCities setPos={setPositions} />
           </Col>
         </Row>
-
       </Container>
-
     </>
   );
 }
 
 export default App;
-
