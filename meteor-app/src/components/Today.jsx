@@ -120,8 +120,8 @@ function Today({ dt, datas }) {
                     <ul className="list-group text-start">
                         <li className="list-group-item distanzaListItem text-truncate" style={{ backgroundColor: color2 }}>Gradi percepiti: <small className="fw-semibold text-dark">{datas?.main?.feels_like ? datas.main.feels_like : 'N/A'}°</small></li>
                         <li className="list-group-item distanzaListItem text-truncate" style={{ backgroundColor: color2 }}>Vento: N-E, <small className="fw-semibold text-dark">{datas?.wind?.speed ? datas.wind.speed : 'N/A'} Km/h</small></li>
-                        <li className="list-group-item distanzaListItem" style={{ backgroundColor: color2 }}>Pressione: <small className="fw-semibold text-dark">{datas?.main?.pressure ? datas.main.pressure : 'N/A'}MB</small></li>
-                        <li className="list-group-item distanzaListItem" style={{ backgroundColor: color2 }}>Umidità: <small className="fw-semibold text-dark">{datas?.main?.humidity ? datas.main.humidity : 'N/A'}%</small></li>
+                        <li className="list-group-item distanzaListItem text-truncate" style={{ backgroundColor: color2 }}>Pressione: <small className="fw-semibold text-dark">{datas?.main?.pressure ? datas.main.pressure : 'N/A'}MB</small></li>
+                        <li className="list-group-item distanzaListItem text-truncate" style={{ backgroundColor: color2 }}>Umidità: <small className="fw-semibold text-dark">{datas?.main?.humidity ? datas.main.humidity : 'N/A'}%</small></li>
                     </ul>
                 </div>
             </Card.Body>
