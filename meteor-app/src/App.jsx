@@ -6,9 +6,11 @@ import GM from "./components/GM";
 import { Container, Row, Col } from 'react-bootstrap';
 import ChartContainer from './components/ChartContainer';
 import OtherBigCities from './components/OtherBigCities';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import NotFoundPage from './components/NotFoundPage';
 
 function App() {
-  const defaultPosition = [40.8518, 14.2681]; 
+  const defaultPosition = [40.8518, 14.2681];
   const [positions, setPositions] = useState(defaultPosition);
   const [city, setCity] = useState("Napoli");
   const [country, setCountry] = useState("IT");
@@ -79,24 +81,35 @@ function App() {
 
   return (
     <>
-      <MyNav city={city} country={country} setPositions={setPositions} setCity={setCity} setCountry={setCountry} />
+      <BrowserRouter>
 
-      <Container>
-        <Row>
-          <Col lg={8}>
-            {dati && dates5.list && <DaysContainer today={dati} dates5={dates5} />}
-          </Col>
-          <Col xs={12} lg={4}>
-            <ChartContainer dati={dates5} />
-          </Col>
-          <Col xs={12} lg={9}>
-            <GM coord={positions} setPosition={setPositions} />
-          </Col>
-          <Col xs={12} lg={3}>
-            <OtherBigCities setPos={setPositions} />
-          </Col>
-        </Row>
-      </Container>
+
+        <Routes>
+          <Route path="/" element={<>
+            <MyNav city={city} country={country} setPositions={setPositions} setCity={setCity} setCountry={setCountry} />
+            <Container>
+              <Row>
+                <Col lg={8}>
+                  {dati && dates5.list && <DaysContainer today={dati} dates5={dates5} />}
+                </Col>
+                <Col xs={12} lg={4}>
+                  <ChartContainer dati={dates5} />
+                </Col>
+                <Col xs={12} lg={9}>
+                  <GM coord={positions} setPosition={setPositions} />
+                </Col>
+                <Col xs={12} lg={3}>
+                  <OtherBigCities setPos={setPositions} />
+                </Col>
+              </Row>
+            </Container>
+          </>
+          }>
+          </Route>
+          <Route path="*" element={<NotFoundPage />}></Route>
+        </Routes>
+      </BrowserRouter>
+
     </>
   );
 }
