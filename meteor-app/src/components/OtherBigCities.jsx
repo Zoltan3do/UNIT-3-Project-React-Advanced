@@ -54,6 +54,14 @@ function OtherBigCities({ setPos }) {
                 return variables["poche-nuvole"].clas;
             case "forte pioggia":
                 return variables["forte-pioggia"].clas;
+            case "foschia":
+                return variables["foschia"].clas;
+            case "temporale con pioggia":
+                return variables["temporale-con-pioggia"].clas;
+            case "pioggia fortissima":
+                return variables["pioggia-fortissima"].clas;
+            case "pioggerella":
+                return variables["pioggerella"].clas;
             default:
                 return "";
         }
